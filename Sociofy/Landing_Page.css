@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*=================================*/
+
+.Hero {
+    scroll-snap-align: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0)), url(Images/Group\ 5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*=================================*/
+
+.nav {
+    width: 100%;
+    padding: 0px 30px;
+}
+
+.navtab {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.navtab ul {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navtab ul li {
+    list-style: none;
+}
+
+.navtab ul li a {
+    padding: 10px 18px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color .3s, background-color .3s;
+}
+
+.navtab ul li a:hover {
+    background-color: #51ADE5;
+}
+
+.navtab ul li a:focus {
+    color: #512dd5;
+    background-color: #2d88d5;
+}
+
+/*=================================*/
+
+.content {
+    position: relative;
+    top: 310px;
+    margin-inline: 10%;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 55px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.content p {
+    font-size: 24px;
+    color: #fff;
+}
+
+.content a {
+    text-decoration: none;
+    font-size: 19px;
+    display: inline-block;
+    letter-spacing: 2px;
+    padding: 12px 20px;
+    background-color: #51ADE5;
+    border-radius: 15px;
+    color: #fff;
+    transition: color .3s, background-color .3s;
+}
+
+.content a:hover {
+    background-color: #2d88d5;
+}
+
+.getBtn {
+    position: relative;
+    top: 40px;
+
+}
+
+.socmed {
+    width: 100%;
+    padding: 0px 80px;
+    position: absolute;
+    bottom: 0;
+    transition: color .3s, background-color .3s;
+}
+
+.socmed:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.socbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.socbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.socbar ul li {
+    list-style: none;
+}
+
+.socbar ul li a {
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(231deg) brightness(113%) contrast(101%);
+    padding: 10px 18px;
+    border-radius: 5px;
+    transition: color .3s, background-color .3s;
+}
+
+.socbar ul li a:hover {
+    background-color: #51ADE5;
+}
+
+
+.socbar p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+/*=================================*/
+
+footer {
+    padding: 30px;
+    background-color: #111;
+}
+
+div.row {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.col {
+    width: 25%;
+    padding: 0px;
+}
+
+div.col#col1 {
+    width: 50%;
+}
+
+div.col h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 500;
+    position: relative;
+} 
+
+div.col p {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+div.col ul {
+    list-style: none;
+}
+
+div.col ul a {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 5px;
+    transition: color .3s, background-color .3s;
+}
+
+div.col ul a:hover {
+    color: #51ADE5;
+}
+
+div.col ul a:focus {
+    color: #512dd5;
+}
+
+.footer-bottom {
+    scroll-snap-align: center;
+    background: #000;
+    padding: 15px 0px;
+}
+
+.footer-bottom p {
+    color: #fff;
+    font-size: small;
+    word-spacing: 2px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+}
+
+.footer-bottom a span {
+    color: #fff;
+    text-transform: uppercase;
+    opacity: .7;
+    font-weight: 200;
+    transition: color .3s, background-color .3s;
+}
+
+.footer-bottom a span:hover {
+    color: #d9ff00;
+    background-color: #51ace5a9;
+    border-radius: 5px;
+    padding: 0 5px;
+}
