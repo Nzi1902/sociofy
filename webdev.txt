@@ -1,0 +1,35 @@
+Sign in credentials
+
+var username = "admin";
+var password = "admingarcia123";
+
+Sign up  credentials
+
+var username="admin";
+var emailaddress="admin@gmail.com";
+var password="";
+
+
+registration credentials
+ var fullname="Jerico Garcia";
+ var age="18";
+ var birthdate="15/06/2023";
+var ctry="Philippines";
+
+forgot pass credentials
+
+var emaildeclared = "";
+var newpassword="jericogarcia123";
+use this email becuase this is the email you registered
+
+
+OTP credentials
+after resetting password sue this otp to proceed
+var verifycode = "2653";
+
+Sign in credentials after resetting  the password
+var username="admin";
+var newpassword="jericogarcia123";
+
+Dashboard 
+click the write under the profile to create a blog
