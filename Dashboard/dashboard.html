@@ -177,190 +177,48 @@
                         Write a Post
                       </button>
                       
-                      <!-- Modal -->
-                      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalCenterTitle">Create Post</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <div class="form-group">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write here..."></textarea>
+                      <div id="post-container">
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">Create Post</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
                               </div>
-                              <div class="row">
-                                <div class="col col-lg-4">
-                                  Add to the Post
+                              <div class="modal-body">
+                                
+                                <div class="form-group">
+                                  <label for="postText">Post Text:</label>
+                                  <textarea class="form-control" id="postText" rows="3" placeholder="Write here..."></textarea>
                                 </div>
-                                <div class="mb-3 col" style="text-align: end;">
-                                  <button type="button" class="btn btn-secondary btn-floating mx-1">
-                                    <i class="fa-solid fa-video"></i>
-                                  </button>
-                          
-                                  <button type="button" class="btn btn-secondary btn-floating mx-1">
-                                    <i class="fa-regular fa-image"></i>
-                                  </button>
-                          
-                                  <button type="button" class="btn btn-secondary btn-floating mx-1">
-                                    <i class="fa-solid fa-user-tag"></i>
-                                  </button>
-                          
-                                  <button type="button" class="btn btn-secondary btn-floating mx-1">
-                                    <i class="fa-sharp fa-solid fa-location-dot"></i>
-                                  </button>
-
-                                  <button type="button" class="btn btn-secondary btn-floating mx-1">
-                                    <i class="fa-solid fa-face-smile"></i>
-                                  </button>
-
+                                <div class="form-group">
+                                  <label for="postImage">Image:</label>
+                                  <input type="file" class="form-control-file" id="postImage">
                                 </div>
                               </div>
-                              
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary">Post</button>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" onclick="createPost()">Post</button>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-
-                      <div class="card mb-3">
-                        <a href="">
-                          <img src="Images/graves.jpg" class="mt-2 ml-2 card-img-top rounded-circle" alt="Post Image" style="width: 40px; height: 40px;">
-                          <strong>Jane Smith</strong>
-                        </a>
-                        <div class="card-body">
-                          <h5 class="card-title">I hope this helps!</h5>
-                          <p class="card-text">Check out this amazing video I found!</p>
-                          <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="1280" height="720" src="https://www.youtube.com/embed/zd401BkhFJ4" title="Wake Up Your Brain : Digital Caffeine - Brain Energizer Binaural Beats - Increase Brain Power" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                          </div>
-                          <div class="mt-3 mb-3">
-                            <button type="button" class="btn btn-primary btn-floating mx-1">
-                              <i class="fa-solid fa-up-long"></i>
-                            </button>
-                            <button type="button" class="btn btn-primary btn-floating mx-1">
-                              <i class="fa-solid fa-down-long"></i>
-                            </button>
-                          </div>
-                          <div class="form-group">
-                            <input type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write here..."></input>
-                          </div>
-                        </div>
-                      </div>
                       
-                      <div class="card mb-3">
-                        <a href="">
-                          <img src="Images/aatrox.jpg" class="mt-2 ml-2 card-img-top rounded-circle" alt="Post Image" style="width: 40px; height: 40px;">
-                          <strong>Larry D. Skelly</strong>
-                        </a>
-                        <div class="card-body">
-                          <h5 class="card-title">Look at this website that I found</h5>
-                          <p class="card-text">I came across this interesting article, check it out!</p>
-                          <a href="#" class="text-primary">Read Article</a>
-                          <div class="mt-3 mb-3">
-                            <button type="button" class="btn btn-primary btn-floating mx-1">
-                              <i class="fa-solid fa-up-long"></i>
-                            </button>
-                            <button type="button" class="btn btn-primary btn-floating mx-1">
-                              <i class="fa-solid fa-down-long"></i>
-                            </button>
-                          </div>
-                          <div class="form-group">
-                            <input type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write here..."></input>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div class="card mb-3">
-                        <a href="">
-                          <img src="Images/akali.jpg" class="mt-2 ml-2 card-img-top rounded-circle" alt="Post Image" style="width: 40px; height: 40px;">
-                          <strong>Barba Ian</strong>
-                        </a>
-
-                        <div class="card-body">
-                          <h5 class="card-title">Rate my Art!</h5>
-                          <p class="card-text">Hello guys! I hope that you have a wonderful day. Can you guys please rate my drawing? thank you!</p>
-
-                          <div>
-                            <img src="Images/graves.jpg" alt="" height="300">
-                          </div>
-                          <div class="mt-3 mb-3">
-                            <button type="button" class="btn btn-primary btn-floating mx-1">
-                              <i class="fa-solid fa-up-long"></i>
-                            </button>
-                            <button type="button" class="btn btn-primary btn-floating mx-1">
-                              <i class="fa-solid fa-down-long"></i>
-                            </button>
-                          </div>
-                          <div class="form-group">
-                            <input type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write here..."></input>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div class="card mb-3">
-                        <a href="">
-                          <img src="Images/johnwick.jpg" class="mt-2 ml-2 card-img-top rounded-circle" alt="Post Image" style="width: 40px; height: 40px;">
-                          <strong>John Wick</strong>
-                        </a>
-                        <div class="card-body">
-                          <h5 class="card-title">Text Post</h5>
-                          <p class="card-text">Just sharing my thoughts on the latest news.</p>
-                          <div class="mt-3 mb-3">
-                            <button type="button" class="btn btn-primary btn-floating mx-1">
-                              <i class="fa-solid fa-up-long"></i>
-                            </button>
-                            <button type="button" class="btn btn-primary btn-floating mx-1">
-                              <i class="fa-solid fa-down-long"></i>
-                            </button>
-                          </div>
-                          <div class="form-group">
-                            <input type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write here..."></input>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div class="card mb-3">
-                        <a href="">
-                          <img src="Images/babayaga.jpg" class="mt-2 ml-2 card-img-top rounded-circle" alt="Post Image" style="width: 40px; height: 40px;">
-                          <strong>Baba Yaga</strong>
-                        </a>
-                        <div class="card-body">
-                          <h5 class="card-title">Look at my artworks!</h5>
-                          <p class="card-text">What are your thoughts?</p>
-                        </div>
-                        
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                          <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                          </ol>
-                          <div class="carousel-inner">
-                            <div class="carousel-item active">
-                              <img src="Images/aatrox.jpg" class="d-block w-100" alt="Post Image">
-                            </div>
-                            <div class="carousel-item">
-                              <img src="Images/teemo.jpg" class="d-block w-100" alt="Post Image">
-                            </div>
-                            <div class="carousel-item">
-                              <img src="Images/msfortune.jpg" class="d-block w-100" alt="Post Image">
-                            </div>
-                          </div>
-                          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                          </a>
-                          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
+                        <!-- Existing posts -->
+                        <div class="card mb-3">
+                          <a href="">
+                            <img src="Images/graves.jpg" class="mt-2 ml-2 card-img-top rounded-circle" alt="Post Image" style="width: 40px; height: 40px;">
+                            <strong>Jane Smith</strong>
                           </a>
                           <div class="card-body">
+                            <h5 class="card-title">I hope this helps!</h5>
+                            <p class="card-text">Check out this amazing video I found!</p>
+                            <div class="embed-responsive embed-responsive-16by9">
+                              <iframe width="1280" height="720" src="https://www.youtube.com/embed/zd401BkhFJ4" title="Wake Up Your Brain : Digital Caffeine - Brain Energizer Binaural Beats - Increase Brain Power" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
                             <div class="mt-3 mb-3">
                               <button type="button" class="btn btn-primary btn-floating mx-1">
                                 <i class="fa-solid fa-up-long"></i>
@@ -370,13 +228,156 @@
                               </button>
                             </div>
                             <div class="form-group">
-                              <input type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write here..."></input>
+                              <input type="text" class="form-control comment-input" placeholder="Write a comment">
+                              <button type="button" class="btn btn-primary btn-sm add-comment-btn mt-3">Add Comment</button>
+                            </div>
+                            <div class="comments">
+                              <!-- Comments will be added here -->
                             </div>
                           </div>
                         </div>
-                      </div>
+
+                        <div class="card mb-3">
+                          <a href="">
+                            <img src="Images/aatrox.jpg" class="mt-2 ml-2 card-img-top rounded-circle" alt="Post Image" style="width: 40px; height: 40px;">
+                            <strong>Larry D. Skelly</strong>
+                          </a>
+                          <div class="card-body">
+                            <h5 class="card-title">Look at this website that I found</h5>
+                            <p class="card-text">I came across this interesting article, check it out!</p>
+                            <a href="#" class="text-primary">Read Article</a>
+                            <div class="mt-3 mb-3">
+                              <button type="button" class="btn btn-primary btn-floating mx-1">
+                                <i class="fa-solid fa-up-long"></i>
+                              </button>
+                              <button type="button" class="btn btn-primary btn-floating mx-1">
+                                <i class="fa-solid fa-down-long"></i>
+                              </button>
+                            </div>
+                            <div class="form-group">
+                              <input type="text" class="form-control comment-input" placeholder="Write a comment">
+                              <button type="button" class="btn btn-primary btn-sm add-comment-btn mt-3">Add Comment</button>
+                            </div>
+                            <div class="comments">
+                              <!-- Comments will be added here -->
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="card mb-3">
+                          <a href="">
+                            <img src="Images/akali.jpg" class="mt-2 ml-2 card-img-top rounded-circle" alt="Post Image" style="width: 40px; height: 40px;">
+                            <strong>Barba Ian</strong>
+                          </a>
+  
+                          <div class="card-body">
+                            <h5 class="card-title">Rate my Art!</h5>
+                            <p class="card-text">Hello guys! I hope that you have a wonderful day. Can you guys please rate my drawing? thank you!</p>
+  
+                            <div>
+                              <img src="Images/graves.jpg" alt="" height="300">
+                            </div>
+                            <div class="mt-3 mb-3">
+                              <button type="button" class="btn btn-primary btn-floating mx-1">
+                                <i class="fa-solid fa-up-long"></i>
+                              </button>
+                              <button type="button" class="btn btn-primary btn-floating mx-1">
+                                <i class="fa-solid fa-down-long"></i>
+                              </button>
+                            </div>
+                            <div class="form-group">
+                              <input type="text" class="form-control comment-input" placeholder="Write a comment">
+                              <button type="button" class="btn btn-primary btn-sm add-comment-btn mt-3">Add Comment</button>
+                            </div>
+                            <div class="comments">
+                              <!-- Comments will be added here -->
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="card mb-3">
+                          <a href="">
+                            <img src="Images/johnwick.jpg" class="mt-2 ml-2 card-img-top rounded-circle" alt="Post Image" style="width: 40px; height: 40px;">
+                            <strong>John Wick</strong>
+                          </a>
+                          <div class="card-body">
+                            <h5 class="card-title">Text Post</h5>
+                            <p class="card-text">Just sharing my thoughts on the latest news.</p>
+                            <div class="mt-3 mb-3">
+                              <button type="button" class="btn btn-primary btn-floating mx-1">
+                                <i class="fa-solid fa-up-long"></i>
+                              </button>
+                              <button type="button" class="btn btn-primary btn-floating mx-1">
+                                <i class="fa-solid fa-down-long"></i>
+                              </button>
+                            </div>
+                            <div class="form-group">
+                              <input type="text" class="form-control comment-input" placeholder="Write a comment">
+                              <button type="button" class="btn btn-primary btn-sm add-comment-btn mt-3">Add Comment</button>
+                            </div>
+                            <div class="comments">
+                              <!-- Comments will be added here -->
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="card mb-3">
+                          <a href="">
+                            <img src="Images/babayaga.jpg" class="mt-2 ml-2 card-img-top rounded-circle" alt="Post Image" style="width: 40px; height: 40px;">
+                            <strong>Baba Yaga</strong>
+                          </a>
+                          <div class="card-body">
+                            <h5 class="card-title">Look at my artworks!</h5>
+                            <p class="card-text">What are your thoughts?</p>
+                          </div>
+                          
+                          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="Images/aatrox.jpg" class="d-block w-100" alt="Post Image">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="Images/teemo.jpg" class="d-block w-100" alt="Post Image">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="Images/msfortune.jpg" class="d-block w-100" alt="Post Image">
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                            <div class="card-body">
+                              <div class="mt-3 mb-3">
+                                <button type="button" class="btn btn-primary btn-floating mx-1">
+                                  <i class="fa-solid fa-up-long"></i>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-floating mx-1">
+                                  <i class="fa-solid fa-down-long"></i>
+                                </button>
+                              </div>
+                              <div class="form-group">
+                                <input type="text" class="form-control comment-input" placeholder="Write a comment">
+                                <button type="button" class="btn btn-primary btn-sm add-comment-btn mt-3">Add Comment</button>
+                              </div>
+                              <div class="comments">
+                                <!-- Comments will be added here -->
+                              </div>
+                            </div>
+                          </div>
                       
-                    </div>
+                        <!-- Add more posts here -->
+                      </div>
+                  </div>
                   </section>
       
           </main>
@@ -416,7 +417,81 @@
     // Attach event listeners to the buttons
     upvoteBtn.addEventListener('click', handleUpvote);
     downvoteBtn.addEventListener('click', handleDownvote);
+
+    function createPost() {
+    const postText = document.getElementById('postText').value;
+    const postImage = document.getElementById('postImage').files[0];
+
+    const newPostCard = document.createElement('div');
+    newPostCard.className = 'card mb-3';
+
+    let postContent = `
+      <a href="">
+        <img src="Images/graves.jpg" class="mt-2 ml-2 card-img-top rounded-circle" alt="Post Image" style="width: 40px; height: 40px;">
+        <strong>Renz Jordan Barrientos</strong>
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">New Post</h5>
+        <p class="card-text">${postText}</p>
+        <div class="mt-3 mb-3">
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fa-solid fa-up-long"></i>
+          </button>
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fa-solid fa-down-long"></i>
+          </button>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control comment-input" placeholder="Write a comment">
+          <button type="button" class="btn btn-primary btn-sm add-comment-btn mt-3">Add Comment</button>
+        </div>
+        <div class="comments">
+          <!-- Comments will be added here -->
+        </div>
+      </div>
+    `;
+
+    if (postImage) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const imageSrc = e.target.result;
+        postContent = postContent.replace('Images/graves.jpg', imageSrc);
+        newPostCard.innerHTML = postContent;
+        addPostToContainer(newPostCard);
+      };
+      reader.readAsDataURL(postImage);
+    } else {
+      newPostCard.innerHTML = postContent;
+      addPostToContainer(newPostCard);
+    }
+
+    document.getElementById('postText').value = '';
+    document.getElementById('postImage').value = '';
+
+    $('#exampleModalCenter').modal('hide');
+  }
+
+  function addPostToContainer(newPostCard) {
+    const postContainer = document.getElementById('post-container');
+    const firstPost = postContainer.firstChild;
+    postContainer.insertBefore(newPostCard, firstPost);
+
+    const addCommentBtn = newPostCard.querySelector('.add-comment-btn');
+    addCommentBtn.addEventListener('click', function () {
+      const commentInput = newPostCard.querySelector('.comment-input');
+      const commentText = commentInput.value.trim();
+      if (commentText !== '') {
+        const commentElement = document.createElement('div');
+        commentElement.className = 'comment';
+        commentElement.textContent = commentText;
+        const commentsContainer = newPostCard.querySelector('.comments');
+        commentsContainer.appendChild(commentElement);
+        commentInput.value = '';
+      }
+    });
+  }
   </script>
+
   
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
